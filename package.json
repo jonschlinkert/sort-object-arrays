@@ -19,13 +19,25 @@
   "scripts": {
     "test": "mocha"
   },
-  "devDependencies": {
-    "mocha": "*",
-    "should": "*"
+  "dependencies": {
+    "kind-of": "^3.0.2"
   },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "keywords": [
+    "arrays",
+    "object",
+    "sort"
+  ],
   "verb": {
+    "plugins": [
+      "gulp-format-md"
+    ],
     "related": {
-      "list": []
+      "list": [
+        "sort-object"
+      ]
     }
   }
 }
