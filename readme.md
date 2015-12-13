@@ -1,4 +1,4 @@
-# sort-object-arrays [![NPM version](https://img.shields.io/npm/v/sort-object-arrays.svg)](https://www.npmjs.com/package/sort-object-arrays)
+# sort-object-arrays [![NPM version](https://img.shields.io/npm/v/sort-object-arrays.svg)](https://www.npmjs.com/package/sort-object-arrays) [![Build Status](https://img.shields.io/travis/jonschlinkert/sort-object-arrays.svg)](https://travis-ci.org/jonschlinkert/sort-object-arrays)
 
 > Recursively sort the array values in an object.
 
