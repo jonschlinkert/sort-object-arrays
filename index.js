@@ -7,6 +7,43 @@
 
 'use strict';
 
-module.exports = function () {
-  // do stuff
-};
+var typeOf = require('kind-of');
+
+/**
+ * Recursively sort the array values in an object.
+ */
+
+function sortArrays(target, fn) {
+  if (typeOf(target) !== 'object') {
+    throw new TypeError('expected target to be an object');
+  }
+
+  for (var key in target) {
+    var val = target[key];
+    if (typeOf(val) === 'object') {
+      target[key] = sortArrays(target[key], fn);
+    } else if (Array.isArray(val)) {
+      target[key] = val.sort(compare(fn));
+    }
+  }
+  return target;
+}
+
+/**
+ * Default comparison function to use for sorting
+ */
+
+function compare(fn) {
+  if (typeof fn === 'function') {
+    return fn;
+  }
+  return function(a, b) {
+    return a.localeCompare(b);
+  };
+}
+
+/**
+ * Expose `sortArrays`
+ */
+
+module.exports = sortArrays;
