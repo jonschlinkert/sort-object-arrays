@@ -1,7 +1,7 @@
 {
   "name": "sort-object-arrays",
   "description": "Recursively sort the array values in an object.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/sort-object-arrays",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/sort-object-arrays",
@@ -36,7 +36,9 @@
     ],
     "related": {
       "list": [
-        "sort-object"
+        "group-object",
+        "sort-object",
+        "extend-shallow"
       ]
     }
   }
