@@ -23,7 +23,10 @@ function sortArrays(target, fn) {
     if (typeOf(val) === 'object') {
       target[key] = sortArrays(target[key], fn);
     } else if (Array.isArray(val)) {
-      target[key] = val.sort(compare(fn));
+      if (typeof val[0] === 'string') {
+        val.sort(compare(fn));
+      }
+      target[key] = val;
     }
   }
   return target;
